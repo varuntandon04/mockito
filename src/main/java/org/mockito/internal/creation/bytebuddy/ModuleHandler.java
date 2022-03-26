@@ -61,6 +61,7 @@ abstract class ModuleHandler {
                 addOpens,
                 forName;
 
+        //TODO: ensure random.nextInt() returns a value greater than Integer.MIN_VALUE
         private ModuleSystemFound(ByteBuddy byteBuddy, SubclassLoader loader, Random random)
                 throws Exception {
             this.byteBuddy = byteBuddy;
