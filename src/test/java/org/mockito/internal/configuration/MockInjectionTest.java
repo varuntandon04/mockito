@@ -69,7 +69,7 @@ public class MockInjectionTest {
                 .hasMessage("mocks should not be null");
     }
 
-    //TODO: add try-catch clause to check for NullPointerException
+    
     @Test
     public void can_try_constructor_injection() throws Exception {
         MockInjection.onField(field("withConstructor"), this)
