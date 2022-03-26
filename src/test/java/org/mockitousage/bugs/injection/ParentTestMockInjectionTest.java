@@ -53,7 +53,7 @@ public class ParentTestMockInjectionTest {
         private DaoA daoFromParent;
         private DaoB daoFromSub;
 
-        //TODO: add try-catch clause to check for NullPointerException 
+        
         public void businessMethod() {
             daoFromParent.doQuery();
             daoFromSub.doQuery();
