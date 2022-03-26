@@ -168,7 +168,7 @@ abstract class ModuleHandler {
         }
         
         
-        //TODO: ensure random.nextInt() returns a value greater than Integer.MIN_VALUE
+        
         @Override
         void adjustModuleGraph(Class<?> source, Class<?> target, boolean export, boolean read) {
             boolean needsExport = export && !isExported(source, target);
@@ -212,7 +212,7 @@ abstract class ModuleHandler {
                                             String.format(
                                                     "%s$%d",
                                                     "org.mockito.codegen.MockitoTypeCarrier",
-                                                    Math.abs(random.nextInt())))
+                                                    Math.abs(random.nextInt() + 1)))
                                     .defineField(
                                             "mockitoType",
                                             Class.class,
