@@ -32,7 +32,7 @@ public class ChildWithSameParentFieldInjectionTest {
     public static class System extends AbstractSystem {
         private SomeService someService;
 
-        //TODO: add try-catch clause to check for NullPointerException 
+        
         public void doSomethingElse() {
             someService.doSomething();
         }
