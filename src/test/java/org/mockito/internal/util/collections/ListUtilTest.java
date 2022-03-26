@@ -18,7 +18,7 @@ import org.mockitoutil.TestBase;
 
 public class ListUtilTest extends TestBase {
 
-	//TODO: change '==' to '.equals("")'
+	
     @Test
     public void shouldFilterList() throws Exception {
         List<String> list = asList("one", "x", "two", "x", "three");
@@ -27,7 +27,7 @@ public class ListUtilTest extends TestBase {
                         list,
                         new Filter<String>() {
                             public boolean isOut(String object) {
-                                return object == "x";
+                                return object.equals("x");
                             }
                         });
 
