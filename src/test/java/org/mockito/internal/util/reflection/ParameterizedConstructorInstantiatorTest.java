@@ -69,7 +69,7 @@ public class ParameterizedConstructorInstantiatorTest {
         }
     }
 
-    //TODO: add try-catch clause to check for NullPointerException
+   
     @Test
     public void should_instantiate_type_if_resolver_provide_matching_types() throws Exception {
         Observer observer = mock(Observer.class);
