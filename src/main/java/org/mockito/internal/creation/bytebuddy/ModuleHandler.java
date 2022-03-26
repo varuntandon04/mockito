@@ -166,7 +166,9 @@ abstract class ModuleHandler {
                 }
             }
         }
-
+        
+        
+        //TODO: ensure random.nextInt() returns a value greater than Integer.MIN_VALUE
         @Override
         void adjustModuleGraph(Class<?> source, Class<?> target, boolean export, boolean read) {
             boolean needsExport = export && !isExported(source, target);
