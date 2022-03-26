@@ -237,14 +237,18 @@ public class WeakConcurrentMap<K, V> extends ReferenceQueue<K>
             hashCode = System.identityHashCode(key);
         }
 
-        //TODO: add flow of control to check if Object is null
+        
         @Override
         public boolean equals(Object other) {
-            if (other instanceof LatentKey<?>) {
-                return ((LatentKey<?>) other).key == key;
-            } else {
-                return ((WeakKey<?>) other).get() == key;
+        	if(other != null ) {
+        		if (other instanceof LatentKey<?>) {
+        			return ((LatentKey<?>) other).key == key;
+        		} else {
+        			return ((WeakKey<?>) other).get() == key;
+        		} 
             }
+        	else
+        		return false;
         }
 
         @Override
