@@ -127,7 +127,7 @@ class SubclassBytecodeGenerator implements BytecodeGenerator {
         return false;
     }
 
-    //TODO: ensure random.nextInt() returns a value greater than Integer.MIN_VALUE
+    
     @Override
     public <T> Class<? extends T> mockClass(MockFeatures<T> features) {
         MultipleParentClassLoader.Builder loaderBuilder =
@@ -186,7 +186,7 @@ class SubclassBytecodeGenerator implements BytecodeGenerator {
                             + features.mockedType.getSimpleName();
         }
         String name =
-                String.format("%s$%s$%d", typeName, "MockitoMock", Math.abs(random.nextInt()));
+                String.format("%s$%s$%d", typeName, "MockitoMock", Math.abs(random.nextInt() + 1));
 
         if (localMock) {
             handler.adjustModuleGraph(features.mockedType, MockAccess.class, false, true);
