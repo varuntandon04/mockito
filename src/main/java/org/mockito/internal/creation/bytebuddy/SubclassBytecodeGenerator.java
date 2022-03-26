@@ -127,6 +127,7 @@ class SubclassBytecodeGenerator implements BytecodeGenerator {
         return false;
     }
 
+    //TODO: ensure random.nextInt() returns a value greater than Integer.MIN_VALUE
     @Override
     public <T> Class<? extends T> mockClass(MockFeatures<T> features) {
         MultipleParentClassLoader.Builder loaderBuilder =
