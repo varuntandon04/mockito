@@ -61,13 +61,13 @@ abstract class ModuleHandler {
                 addOpens,
                 forName;
 
-        //TODO: ensure random.nextInt() returns a value greater than Integer.MIN_VALUE
+        
         private ModuleSystemFound(ByteBuddy byteBuddy, SubclassLoader loader, Random random)
                 throws Exception {
             this.byteBuddy = byteBuddy;
             this.loader = loader;
             this.random = random;
-            injectonBaseSuffix = Math.abs(random.nextInt());
+            injectonBaseSuffix = Math.abs(random.nextInt() + 1);
             Class<?> moduleType = Class.forName("java.lang.Module");
             getModule = Class.class.getMethod("getModule");
             isOpen = moduleType.getMethod("isOpen", String.class, moduleType);
